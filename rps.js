@@ -12,13 +12,6 @@ const getComputerChoice = items[Math.floor(Math.random() * items.length)]
 
 //--------------------------------------Step TWO---------------------------------------------------------
 // Play one round
-const getPlayerChoise = 'paper' // prompt('Enter: rock, paper or scissors ').trim().toLowerCase();
-const computerSelection = `${getComputerChoice}`;
-const playerSelection = `${getPlayerChoise}`;
-
-    let playerScore = 0;    
-    let computerScore = 0;
-
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) { 
             return 'DRAW'
@@ -35,8 +28,12 @@ function playRound(playerSelection, computerSelection) {
 //--------------------------------------STEP FINALE---------------------------------------------------------
 // Play five rounds
 
-function 
-
-
-
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    for (i = 0; i < 5; i++) {
+        const getPlayerChoise = 'rock' // prompt('Enter: rock, paper or scissors ').trim().toLowerCase();
+        let playerSelection = `${getPlayerChoise}`;
+        let computerSelection = `${getComputerChoice}`;
+        console.log(playRound(playerSelection, computerSelection));
+    }
+}
+game();
