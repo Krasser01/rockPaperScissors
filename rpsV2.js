@@ -8,7 +8,7 @@
 //! **Solved** JavaScript is showing reference error 'Prompt is not defined'
 const prompt=require("prompt-sync")({sigint:true});
 
-//! Functions
+// ! Array
 //TODO  Explain, why to declare a varible with the keyword `const`
 const rps = ['rock', 'paper', 'scissors'] //? Array; All posoble options!
 
@@ -25,6 +25,7 @@ let computerSelection = rps[Math.floor(Math.random() * rps.length)];
 // playerSelection is case-insensitive
 // remove any whitespaces from playerSelection
 // TODO Expalin, why .trim() and .toLowerCase() is placed after the string and not after prompt?
+
 playerSelection = prompt('Pick Your Weapon Wisely Soldir ').trim().toLowerCase();
 // TODO Make sure player picks a valid option.
 // If playerSelection != one of the items in the array
@@ -33,17 +34,29 @@ playerSelection = prompt('Pick Your Weapon Wisely Soldir ').trim().toLowerCase()
 //! Play a single round
 function playRound(playerSelection, computerSelection) {
    if (playerSelection === computerSelection) {
-    return 'It\'s a draw '
+    //nothing.
    } else if (
             (playerSelection === 'rock'  && !(computerSelection === 'paper')) ||
             (playerSelection === 'scissors' && !(computerSelection === 'rock')) ||
             (playerSelection === 'paper' && !(computerSelection === 'scissors'))
         ) {
-             return 'You win'
+            playerScore = x++
    } else {
-    return 'You LOST'
+    computerScore = x++
    }
 }
     
+//! Function
+function game(playRound) {
+    for (let i = 0; i < 5; i++) {
+    let playerScore = 0;
+    let computerScore = 0;
+    if (playerScore > computerScore) {
+        return 'You Won'
+    } else {
+        'You Lost'
+    }
+    }
+}
 // TODO Explain, why to include the varibles?
-console.log(playRound(playerSelection, computerSelection));
+console.log(game(playRound));
